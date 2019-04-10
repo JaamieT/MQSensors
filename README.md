@@ -9,4 +9,4 @@ To take readings call the takeReadings() function i.e
 
 <code>  int mq3Reading = mq3.takeReading(); </code>
 
-These libraries are compatible with any MQ sensor that takes 5v continuously.
+These libraries are compatible with any MQ sensors that take 5v continuously.
