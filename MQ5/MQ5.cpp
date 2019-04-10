@@ -1,17 +1,17 @@
-#include "MQ4.h"
+#include "MQ5.h"
 
-MQ4::MQ4(){}
+MQ5::MQ5(){}
 
-MQ4::MQ4(uint8_t aPin, uint8_t dPin){
+MQ5::MQ5(uint8_t aPin, uint8_t dPin){
 	analogPin = aPin;
 	digitalPin = dPin;
 	currentValue = 0;
-	mCoef = -2.88;
-	bCoef = 8.40;
-	R0 = 2.25;
+	mCoef = -2.42;
+	bCoef = 7.62;
+	R0 = 1.54;
 }
 
-double MQ4::takeReading(){
+double MQ5::takeReading(){
 	for (int i = 0; i < 20; i++){
 		currentValue += analogRead(analogPin);
 		delay(10);
@@ -25,22 +25,22 @@ double MQ4::takeReading(){
 	return PPM;
 }
 
-void MQ4::setAnalogPin(uint8_t aPin){
+void MQ5::setAnalogPin(uint8_t aPin){
 	analogPin = aPin;
 }
 
-void MQ4::setDigitalPin(uint8_t dPin){
+void MQ5::setDigitalPin(uint8_t dPin){
 	digitalPin = dPin;
 }
 
-float MQ4::getCurrentValue(){
+float MQ5::getCurrentValue(){
 	return currentValue;
 }
 
-uint8_t  MQ4::getAnalogPin(){
+uint8_t  MQ5::getAnalogPin(){
 	return analogPin;
 }
 
-uint8_t  MQ4::getDigitalPin(){
+uint8_t  MQ5::getDigitalPin(){
 	return digitalPin;
 }

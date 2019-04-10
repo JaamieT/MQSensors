@@ -1,11 +1,11 @@
-#ifndef _MQ6_H_
-#define _MQ6_H_
+#ifndef _MQ5_H_
+#define _MQ5_H_
 #endif
 
 #include "Arduino.h"
 
 
-class MQ6 {
+class MQ5 {
 private:
 	uint8_t analogPin;
 	uint8_t digitalPin;
@@ -14,8 +14,8 @@ private:
 	float R0;
 	float bCoef;
 public:
-	MQ6();
-	MQ6(uint8_t, uint8_t);
+	MQ5();
+	MQ5(uint8_t, uint8_t);
 	double takeReading();
 	void setAnalogPin(uint8_t);
 	void setDigitalPin(uint8_t);

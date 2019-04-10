@@ -4,18 +4,19 @@
 
 #include "Arduino.h"
 
-#define coefficiet_A 19.32
-#define coefficient_B -0.64
 
 class MQ4 {
 private:
 	uint8_t analogPin;
 	uint8_t digitalPin;
 	float currentValue;
+	float mCoef;
+	float R0;
+	float bCoef;
 public:
 	MQ4();
 	MQ4(uint8_t, uint8_t);
-	float takeReading();
+	double takeReading();
 	void setAnalogPin(uint8_t);
 	void setDigitalPin(uint8_t);
 	uint8_t getAnalogPin(void);
